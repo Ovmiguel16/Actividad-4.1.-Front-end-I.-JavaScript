@@ -16,3 +16,4 @@ const generarPaginaAleatoria = () => Math.floor(Math.random()*(8-1+1)+1);
 /*Peticiones a la Api peliculas*/
 export const peliculasPopularesAPI = () => axios.get(`https://api.themoviedb.org/3/movie/popular?language=es-ES&page=${generarPaginaAleatoria()}`, {headers: {"Authorization": `Bearer ${API_ACCESS_TOKEN}` }});
 export const detallesPeliculasByID = (idPelicula) => axios.get(urlDetallesPelicula(idPelicula));
+export const buscadorPeliculasAPI = (nombrePelicula) => axios.get(urlBuscadorPelicula(nombrePelicula));
