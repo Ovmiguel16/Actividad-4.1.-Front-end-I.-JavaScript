@@ -10,3 +10,8 @@ const urlDetallesPelicula = (idPelicula) => {
 const urlBuscadorPelicula = (nombrePelicula) => {
     return `https://api.themoviedb.org/3/search/movie?query=${nombrePelicula}&language=es-ES&api_key=${API_KEY}`
 }
+
+const generarPaginaAleatoria = () => Math.floor(Math.random()*(8-1+1)+1);
+
+/*Peticiones a la Api peliculas*/
+export const peliculasPopularesAPI = () => axios.get(`https://api.themoviedb.org/3/movie/popular?language=es-ES&page=${generarPaginaAleatoria()}`, {headers: {"Authorization": `Bearer ${API_ACCESS_TOKEN}` }});
