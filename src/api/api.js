@@ -6,3 +6,7 @@ const API_ACCESS_TOKEN = `eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OGFmYjdlYTE1N2E4N2Q4M
 const urlDetallesPelicula = (idPelicula) => {
     return `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${API_KEY}&language=es-ES&append_to_response=videos`;
 }
+
+const urlBuscadorPelicula = (nombrePelicula) => {
+    return `https://api.themoviedb.org/3/search/movie?query=${nombrePelicula}&language=es-ES&api_key=${API_KEY}`
+}
