@@ -32,6 +32,26 @@ function Home() {
   return (
     <div className={style.contenedor}>
 
+      <div className={style.searchBox}> 
+        <h3>Películas Populares</h3>
+        <div className={style.busqueda}>
+          <label htmlFor="busqueda">Buscar Película</label>
+          <input type="search" onChange={({target}) => setQueryMovie(target.value)}  placeholder='Spiderman, Titanic...' id='busqueda'/>
+        </div>
+      </div>
+
+      <div className={style.posters}>        
+        { peliculas_a_mostrar.length > 0 ?
+            peliculas_a_mostrar.map( movie => (
+              <Poster
+                movie={movie} 
+                key={movie.id}
+              />
+            ))
+          : ''
+        }         
+      </div>
+      { loading && <p className={style.loading}>Cargando Películas....</p> }
     </div>
   )
 }
