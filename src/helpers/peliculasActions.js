@@ -42,5 +42,5 @@ export const buscadorPeliculaAction = async (nombrePelicula, setPeliculaBuscada)
     setPeliculaBuscada(data.results.slice(0,12))
   } catch (error) {
     console.log(error.message);
-}
+  }
 }
