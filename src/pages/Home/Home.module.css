@@ -29,3 +29,30 @@
     margin-top: 1rem;
 }
 
+.searchBox {
+    margin-bottom: 1.5rem;
+    background-color: #F1F5F8;
+    width: 62rem;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    color: #145cd4;
+}
+
+.busqueda > label, .searchBox > h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.busqueda > input {
+    padding: 7px;
+    margin-left: 6px;
+    outline: none;
+    border: none;
+    background-color: #F1F5F8;
+    border: 2px solid #145cd4;
+    border-radius: 8px;
+}
+
