@@ -35,3 +35,12 @@ export const detallesPeliculasAction = async (idPelicula, setLoading, setDataVid
     })
   }
 }
+
+export const buscadorPeliculaAction = async (nombrePelicula, setPeliculaBuscada) => {
+  try {
+    const {data} = await buscadorPeliculasAPI(nombrePelicula);
+    setPeliculaBuscada(data.results.slice(0,12))
+  } catch (error) {
+    console.log(error.message);
+}
+}
