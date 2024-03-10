@@ -41,3 +41,52 @@
     font-size: 17px;
 }
 
+button {
+    border: none;
+    outline: none;
+    padding: 7px;
+    border-radius: 8px;
+    background-color: #145cd4;
+    margin-top: 1.2rem;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease background;
+}
+
+button:hover {
+    background: #2b6dde;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 1270px) {
+    .titlePelicula {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+} 
+
+@media only screen and (max-width: 850px) {
+    .titlePelicula {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .contenedor {
+        width: auto;
+        height: 100vh !important;
+    }
+    .marcoVideo > iframe{
+        width: 300px;
+        height: auto;
+    }
+
+    .detallesPelicula {
+        width: 280px;
+        margin: auto;
+    }
+    .detallesPelicula > p {
+        font-size: 11px;
+    }
+} 
