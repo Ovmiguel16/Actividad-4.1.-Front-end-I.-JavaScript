@@ -21,7 +21,13 @@ function Detalles() {
 
   return (
     <div className={style.contenedor} style={{backgroundImage: `url(${urlMostrarImagenPelicula})`}}>
+      <h2 className={style.titlePelicula}>{dataVideo.original_title || 'Cargando...'}</h2>
+      <div className={style.marcoVideo}>
+        <iframe width="600" height="400" src={dataVideo.linkVideo} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+      </div>
       
+
+      <button onClick={() => navigate('/')}>Volver al inicio</button>
     </div>
   )
 }
