@@ -27,6 +27,11 @@ export const detallesPeliculasAction = async (idPelicula, setLoading, setDataVid
       release_date: data?.release_date
     })
   } catch (error) {
-    
+    console.log(error.message);
+    setDataVideo({ 
+      overview: 'No hemos sido capaces de mostrar la información, lo sentimos.',
+      original_title: 'Ha ocurrido un error interno.',
+      linkVideo: 'https://www.youtube.com/embed/', 
+    })
   }
 }
