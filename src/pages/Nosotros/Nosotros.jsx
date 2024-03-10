@@ -6,22 +6,26 @@ function Nosotros() {
     {
       nombre: 'Richard',
       usuarioGithub: 'richardsiv',
-      genero: 'masculino'
+      genero: 'masculino',
+      email: 'richardsiverioww@gmail.com'
     },
     {
       nombre: 'Rosangel',
       usuarioGithub: 'RosangelBetancourt',
-      genero: 'femenino'
+      genero: 'femenino',
+      email: 'betancourtmatuzalenrove@uvm.edu.ve'
     },
     {
       nombre: 'Miguel',
       usuarioGithub: 'Ovmiguel16',
-      genero: 'masculino'
+      genero: 'masculino',
+      email: 'omanavillamizarmian@uvm.edu.ve'
     },
     {
       nombre: 'Yeriagny',
       usuarioGithub: 'YeriagnyC',
-      genero: 'femenino'
+      genero: 'femenino',
+      email: 'chirinosteranyeve@uvm.edu.ve'
     },
   ]
 

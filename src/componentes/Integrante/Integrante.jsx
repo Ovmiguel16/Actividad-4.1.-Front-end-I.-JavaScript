@@ -13,7 +13,7 @@ function Integrante({alumno}) {
         <div className={`${style.infoAlumno} ${colorDelTema === 'oscuro' ? style.oscuro : ''}`}>
             <h3>{alumno.nombre}</h3>
             <span><b>Github:</b> {alumno.usuarioGithub}</span>
-            <span><b>Correo:</b> {alumno.usuarioGithub + 'gmail.com'}</span>
+            <span><b>Correo:</b> {alumno.email}</span>
         </div>
     </div>
   )
