@@ -1,34 +1,44 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import style from './App.module.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Navbar from './componentes/Navbar/Navbar'
+import Nosotros from './pages/Nosotros/Nosotros'
+import Home from './pages/Home/Home'
+import Detalles from './pages/Detalles/Detalles'
+import LunaIcon from './assets/luna-icon.png'
+import SolIcon from './assets/sol-icon.png'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const temaGuardado = localStorage.getItem('tema')
+  const [tema, setTema] = useState(temaGuardado || 'oscuro');
+  const temaEsOscuro = tema === 'oscuro';
+
+  const colocarTema = (temaClickeado) => {
+    localStorage.setItem('tema', temaClickeado);
+    setTema(temaClickeado)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <Navbar />
+      <div className={`${style.mainStyle} ${temaEsOscuro ? style.oscuro : style.claro}`}>
+        <img 
+            onClick={() => colocarTema(temaEsOscuro ? 'claro' : 'oscuro')}
+            src={temaEsOscuro ? SolIcon : LunaIcon}
+            alt="miniatura de la pelicula" 
+            className={`${style.tema} `} 
+        />
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/nosotros" element={ <Nosotros /> } />   
+          <Route path="/detalles" element={ <Detalles /> } />                    
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   )
 }
 
