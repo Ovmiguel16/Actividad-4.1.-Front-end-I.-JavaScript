@@ -18,12 +18,21 @@
 .avatar {
     width: 120px;
     height: 120px;
-    object-fit: cover;
 }
 
 .avatar > img {
     width: 100%;
+    border-radius: 50%;
+    object-fit: cover;  
+    border: 2px solid #c0bcbc;
+    padding: 2px;
     height: 100%;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.avatar > img:hover {
+    transform: scale(1.15) rotate(12deg);
 }
 
 .infoAlumno {
@@ -31,11 +40,19 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 1rem;
+}
+
+.email{
+    font-size: 14.5px;
 }
 
 @media only screen and (max-width: 1124px) {
     .card {
         width: 15rem;
+    }
+    .email {
+        font-size: 11.5px;
     }
 } 
 
@@ -43,6 +60,9 @@
     .card {
         width: 20rem;        
     } 
+    .email {
+        font-size: 14px;
+    }
 } 
 
 @media only screen and (max-width: 350px) {

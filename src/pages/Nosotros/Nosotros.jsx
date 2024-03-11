@@ -1,31 +1,36 @@
 import Integrante from '../../componentes/Integrante/Integrante'
 import style from './nosotros.module.css';
+import Yeriagny from '../../assets/yeriagny.jpg'
+import Richard from '../../assets/Richard.jpg'
+import Rosangel from '../../assets/rosangel.jpg'
+import Miguel from '../../assets/miguel.jpg'
+
 
 function Nosotros() {
   const integrantes = [
     {
       nombre: 'Richard',
       usuarioGithub: 'richardsiv',
-      genero: 'masculino',
-      email: 'richardsiverioww@gmail.com'
+      email: 'richardsiverioww@gmail.com',
+      avatar: Richard
     },
     {
       nombre: 'Rosangel',
       usuarioGithub: 'RosangelBetancourt',
-      genero: 'femenino',
-      email: 'betancourtmatuzalenrove@uvm.edu.ve'
+      email: 'betancourtmatuzalenrove@uvm.edu.ve',
+      avatar: Rosangel
     },
     {
       nombre: 'Miguel',
       usuarioGithub: 'Ovmiguel16',
-      genero: 'masculino',
-      email: 'omanavillamizarmian@uvm.edu.ve'
+      email: 'omanavillamizarmian@uvm.edu.ve',
+      avatar: Miguel
     },
     {
       nombre: 'Yeriagny',
       usuarioGithub: 'YeriagnyC',
-      genero: 'femenino',
-      email: 'chirinosteranyeve@uvm.edu.ve'
+      email: 'chirinosteranyeve@uvm.edu.ve',
+      avatar: Yeriagny
     },
   ]
 
