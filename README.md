@@ -23,7 +23,7 @@ Paso 2
 - Descomprime la carpeta descargada
 - Ubicate en la carpeta clonada o descargada
   
-      cd frontend-proyecto-peliculas
+      cd Actividad-4.1.-Front-end-I.-JavaScript-master
       git checkout master
 
 Paso 3
@@ -34,7 +34,7 @@ Paso 4
 - En la consola ubicate en la ruta del FrontEnd
 - Ejecuta el comando npm i (Instala todas las dependencias necesarias)
 
-      cd frontend-proyecto-peliculas
+      cd Actividad-4.1.-Front-end-I.-JavaScript-master
       npm i
   
 Paso 6
